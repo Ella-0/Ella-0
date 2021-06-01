@@ -34,7 +34,7 @@ with no issues. The following are potential candidates for that:
 ### WebKit
 As part of Iglunix, I'm working on a WebKit port (WPM) that aims to be portable
 accross many *nix operating systems and not depend on any GNU software. Other
-WebKit ports that would otherwise satisfy Iglunix's needs such as WPM depend on
+WebKit ports that would otherwise satisfy Iglunix's needs such as WPE depend on
 GLib.
 
 ### Grime
