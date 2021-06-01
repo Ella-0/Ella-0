@@ -16,17 +16,43 @@ Here are some ideas to get you started:
 
 ### Hi there 👋
 
-I’m currently working on [Iglunix](https://github.com/iglunix/), a Linux (and in the future other kernels) distribution with no GNU components. This includes work on a reimplementation of GLib and a simple, WIP bootloader that can be built with an LLVM toolchain. Currenty GNU make is the only GNU package included; unfortunately there are no complete reimplementations of GNU make however [kati](https://github.com/google/kati) has implemented a fair portion of GNU make, [Lightning Creations](https://github.com/LightningCreations) aims to implement GNU extensions in LC-Make and [toybox](https://github.com/landley/toybox/) aims to have an implementation of GNU make. I have got simple GUI applications running with various Wayland compositors however there are still some issues here. I some of the issues are caused by a lack of udev. Instead I'm using [libudev-zero](https://github.com/illiliti/libudev-zero) which does implement everything yet but I do plan on contributing to it when I wrap my head around the way udev works. Currently no web browsers run; I'm currently working on implementing the various GNU APIs required by the WebKit WPE (and maybe GTK if I get around to reimplementing that) port to get that running. This means reimplementing GLib and Fribidi (I'll probably make a wrapper around [Servo's Bidi](https://github.com/servo/unicode-bidi) implementation for this).
+I'm Ella (She/They) and I'm currently working on several projects mostly as part of the
+[Iglunix](https://github.com/iglunix/) Linux distribution (Linux with none of
+the GNU).
 
-I'm also working on a programming language called [grime](https://github.com/Ella-0/grimec). Unfortunately the compiler isn't really in a very usable state and I've changed the syntax quite a bit. The following is a classic example:
+### Iglunix
+Iglunix is a Linux (and in the future other kernels) distribution with no GNU
+software included. It aims to become selfhosting with no GNU components
+currently the only thing stopping that is the lack of a make implementation
+that implements enough of the GNU extensions to build the Linux kernel and Musl
+with no issues. The following are potential candidates for that:
+
+ - [makers](https://code.boringcactus.com/makers/)
+ - [kati](https://github.com/google/kati)
+ - [lc-make](https://github.com/LightningCreations/lc-make)
+
+### WebKit
+As part of Iglunix, I'm working on a WebKit port (WPM) that aims to be portable
+accross many *nix operating systems and not depend on any GNU software. Other
+WebKit ports that would otherwise satisfy Iglunix's needs such as WPM depend on
+GLib.
+
+### Grime
+
+I'm also working on a programming language called
+[grime](https://github.com/Ella-0/grimec). Unfortunately the compiler isn't
+really in a very usable state and I've changed the syntax quite a bit. The
+following is a classic example:
+
 ```grime
-mod!(test::hello_world)
+mod test::hello_world;
 
-use!(std::Env)
+use std::Env;
 
 pub fn main(env: &Env) -> Result((), NotZero(u32)) {
   env.stdout.println("Hello, World!");
   Ok(())
 }
 ```
-The syntax is very similar to Rust and will have a similar borrow checker but also intends to include the compile time flexibility of Zig.
+The syntax is very similar to Rust and will have a similar borrow checker but
+also intends to include the compile time flexibility of Zig.
