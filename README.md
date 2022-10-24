@@ -12,24 +12,7 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
 
-### Hi there 👋
-
-I'm Ella (She/They) and I'm currently working on several projects mostly as part of the
-[Iglunix](https://github.com/iglunix/) Linux distribution (Linux with none of
-the GNU).
-
-### Iglunix
-Iglunix is a Linux (and in the future other kernels) distribution with no GNU
-software included. It aims to become selfhosting with no GNU components
-currently the only thing stopping that is the lack of a make implementation
-that implements enough of the GNU extensions to build the Linux kernel and Musl
-with no issues. The following are potential candidates for that:
-
- - [makers](https://code.boringcactus.com/makers/)
- - [kati](https://github.com/google/kati)
- - [lc-make](https://github.com/LightningCreations/lc-make)
 
 ### Grime
 
@@ -50,3 +33,21 @@ pub fn main(env: &Env) -> Result((), NotZero(u32)) {
 ```
 The syntax is very similar to Rust and will have a similar borrow checker but
 also intends to include the compile time flexibility of Zig.
+
+-->
+
+### Hi there 👋
+
+I'm Ella (She/They) and I'm currently working on several projects mostly as part of the
+[Iglunix](https://github.com/iglunix/) Linux distribution (Linux with none of
+the GNU).
+
+### AGXV
+AGXV is a Vulkan driver for Apple Silicon Macs intended to be used in Asahi Linux.
+
+### Iglunix
+Iglunix is a Linux (and in the future other kernels) distribution with no GNU
+software included. It aims to become selfhosting with no GNU components
+currently the only thing stopping that is the lack of a make implementation
+that implements enough of the GNU extensions to build the Linux kernel and Musl
+with no issues.
